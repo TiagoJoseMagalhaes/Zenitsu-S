@@ -36,6 +36,90 @@ struct RAX
 	} RAX;
 };
 
+struct RBX
+{
+	union
+	{
+		uint64 reg;
+		struct EBX
+		{
+			union {
+				uint32 reg;
+				struct BX
+				{
+					union
+					{
+						uint16 reg;
+						struct base
+						{
+							uint8 bl;
+							uint8 bh;
+						} base;
+					} BX;
+					uint16 pad;
+				} BX;
+			} EBX;
+			uint32 pad;
+		} EBX;
+	} RBX;
+};
+
+struct RAX
+{
+	union
+	{
+		uint64 reg;
+		struct EAX
+		{
+			union {
+				uint32 reg;
+				struct AX
+				{
+					union
+					{
+						uint16 reg;
+						struct base
+						{
+							uint8 al;
+							uint8 ah;
+						} base;
+					} AX;
+					uint16 pad;
+				} AX;
+			} EAX;
+			uint32 pad;
+		} EAX;
+	} RAX;
+};
+
+struct RAX
+{
+	union
+	{
+		uint64 reg;
+		struct EAX
+		{
+			union {
+				uint32 reg;
+				struct AX
+				{
+					union
+					{
+						uint16 reg;
+						struct base
+						{
+							uint8 al;
+							uint8 ah;
+						} base;
+					} AX;
+					uint16 pad;
+				} AX;
+			} EAX;
+			uint32 pad;
+		} EAX;
+	} RAX;
+};
+
 int main()
 {
 	RAX reg;
